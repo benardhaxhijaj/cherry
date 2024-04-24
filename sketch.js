@@ -29,7 +29,8 @@ function draw() {
     var y = radius * cos(angleOffset * offsetYRad) * sin(ang);
     stroke(255, map(sin(ang + angleOffset), -1, 1, 255, 0));
     line(0, 0, x, y); // Lines originate from the center
-    circle(x, y, 5);
+    fill(255); // Set fill color to white
+    circle(x, y, 5); // Draw the circle with white fill
     vertex(x, y);
   }
   endShape(CLOSE);
