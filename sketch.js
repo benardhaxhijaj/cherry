@@ -27,10 +27,16 @@ function draw() {
     var offsetYRad = sin(ang + angleOffset) + 1;
     var x = radius * cos(angleOffset * offsetXRad) * cos(ang);
     var y = radius * cos(angleOffset * offsetYRad) * sin(ang);
+    
+    // Set the stroke to white for the lines
     stroke(255, map(sin(ang + angleOffset), -1, 1, 255, 0));
     line(0, 0, x, y); // Lines originate from the center
-    fill(255); // Set fill color to white
-    circle(x, y, 5); // Draw the circle with white fill
+    
+    // Set the stroke to white for the circles
+    stroke(255); // This will make the circle's border white
+    fill(255); // This will make the circle's interior white
+    circle(x, y, 5);
+    
     vertex(x, y);
   }
   endShape(CLOSE);
